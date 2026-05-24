@@ -23,6 +23,9 @@ class TelaMenu(Tela):
         self.fonte_opcao_padrao = pygame.font.SysFont(FONTE_TITULO, MENU_FONTE_OPCAO_TAMANHO, bold=True)
         self.fonte_opcao_selecionada = pygame.font.SysFont(FONTE_TITULO, MENU_FONTE_OPCAO_SELECIONADA_TAMANHO, bold=True)
         self.fonte_controles = pygame.font.SysFont(FONTE_TITULO, MENU_FONTE_CONTROLES_TAMANHO)
+        # --- Som do menu ---
+        pygame.mixer.music.load("asset/som/som_menu.wav")
+        pygame.mixer.music.play(-1)
 
     def desenhar(self, janela):
         # --- Fundo ---

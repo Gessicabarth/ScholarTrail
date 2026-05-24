@@ -8,7 +8,7 @@ from src.Const import (
     JANELA_LARGURA, JANELA_ALTURA, CASA_LARGURA, CASA_ALTURA,
     JOGADOR_DESLOCAMENTO_HORIZONTAL,
     DADO_VALOR_MINIMO, DADO_VALOR_MAXIMO,
-    DELAY_ENTRE_TURNOS_MS,
+    DELAY_ENTRE_TURNOS_MS, DERROTA_LIMITE_RODADAS,
     QUIZ_COR_FUNDO_PAINEL, QUIZ_COR_BORDA_PAINEL, QUIZ_COR_DISCIPLINA,
     QUIZ_COR_OPCAO_NORMAL, QUIZ_COR_OPCAO_SELECIONADA,
     QUIZ_COR_ACERTO, QUIZ_COR_ERRO,
@@ -26,6 +26,9 @@ class Tabuleiro(Tela):
         self.jogo = jogo
         self.quantidade_jogadores = quantidade_jogadores
         self.fundo = pygame.image.load("asset/imagem/fundo_tabuleiro_modo_claro.png").convert()
+        # --- Som do tabuleiro ---
+        pygame.mixer.music.load("asset/som/som_tabuleiro.wav")
+        pygame.mixer.music.play(-1)
         self.casas = self.criar_casas()
         self.pos_partida = self.calcular_pos_partida()
         self.pos_chegada = self.calcular_pos_chegada()
@@ -46,9 +49,10 @@ class Tabuleiro(Tela):
         self.quiz_tempo_aguardando = 0
         self.quiz_casa_anterior = 0
         self.quiz_voltar = False
-        self.voltando_pra_partida = False
         self.casas_com_quiz = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30]
         self.vencedor = None
+        self.rodada_atual = 0
+        self.derrota = False
 
     def criar_casas(self):
         # --- Caminho em formato cobra ---
@@ -121,6 +125,10 @@ class Tabuleiro(Tela):
         self.valor_dado = random.randint(DADO_VALOR_MINIMO, DADO_VALOR_MAXIMO)
         self.quiz_casa_anterior = jogador.casa_atual
 
+        # --- Conta rodada no modo solo ---
+        if self.quantidade_jogadores == 1:
+            self.rodada_atual += 1
+
         # --- Calcula casas a percorrer ---
         casa_inicio = jogador.casa_atual
         casa_fim = casa_inicio + self.valor_dado
@@ -153,26 +161,15 @@ class Tabuleiro(Tela):
         self.quiz_tempo_feedback = pygame.time.get_ticks()
 
     def voltar_jogador(self):
-        # --- Faz o jogador voltar casa a casa ate a casa anterior ---
+        # --- Teleporta o jogador de volta pra casa anterior ---
         jogador = self.jogador_da_vez()
-        casa_atual = jogador.casa_atual
-        casa_destino = self.quiz_casa_anterior
-
-        if casa_destino > 0:
-            # --- Monta caminho reverso ate a casa destino ---
-            casas_volta = list(reversed(self.casas[casa_destino - 1:casa_atual - 1]))
-            jogador.iniciar_movimento(casas_volta)
-            self.voltando_pra_partida = False
+        if self.quiz_casa_anterior > 0:
+            casa_volta = self.casas[self.quiz_casa_anterior - 1]
+            jogador.x, jogador.y = casa_volta.obter_centro()
+            jogador.casa_atual = self.quiz_casa_anterior
         else:
-            # --- Volta pra partida: anda ate casa 1 e depois teleporta ---
-            casas_volta = list(reversed(self.casas[0:casa_atual - 1]))
-            if casas_volta:
-                jogador.iniciar_movimento(casas_volta)
-                self.voltando_pra_partida = True
-            else:
-                # --- Ja esta na casa 1, teleporta direto ---
-                jogador.x, jogador.y = self.pos_partida
-                jogador.casa_atual = 0
+            jogador.x, jogador.y = self.pos_partida
+            jogador.casa_atual = 0
 
     def quebrar_texto(self, texto, fonte, largura_maxima):
         # --- Quebra o texto em linhas que cabem na largura maxima ---
@@ -271,11 +268,37 @@ class Tabuleiro(Tela):
             janela.blit(texto, (20, 20))
 
         # --- Indicador de vez (so com 2 jogadores) ---
-        if self.quantidade_jogadores > 1:
-            fonte_vez = pygame.font.SysFont("Arial", 20)
+        if self.quantidade_jogadores > 1 and not self.vencedor:
+            barra = pygame.Surface((JANELA_LARGURA, 36), pygame.SRCALPHA)
+            barra.fill((0, 0, 0, 120))
+            janela.blit(barra, (0, JANELA_ALTURA - 36))
+            fonte_vez = pygame.font.SysFont("Arial", 20, bold=True)
             jogador = self.jogador_da_vez()
             texto_vez = fonte_vez.render(f"Vez: Jogador {jogador.numero}", True, (255, 255, 255))
-            janela.blit(texto_vez, (20, 60))
+            rect_vez = texto_vez.get_rect(center=(JANELA_LARGURA // 2, JANELA_ALTURA - 18))
+            janela.blit(texto_vez, rect_vez)
+            # --- Mensagem de acao ---
+            if not self.algum_jogador_movendo() and not self.aguardando_turno and not self.quiz_ativo and not self.quiz_aguardando:
+                fonte_msg = pygame.font.SysFont("Arial", 20, bold=True)
+                msg = fonte_msg.render("Pressione ESPACO para rolar o dado", True, (255, 255, 255))
+                rect_msg = msg.get_rect(midleft=(20, JANELA_ALTURA - 18))
+                janela.blit(msg, rect_msg)
+
+        # --- Barra inferior com rodadas (so modo solo) ---
+        if self.quantidade_jogadores == 1 and not self.vencedor and not self.derrota:
+            barra = pygame.Surface((JANELA_LARGURA, 36), pygame.SRCALPHA)
+            barra.fill((0, 0, 0, 120))
+            janela.blit(barra, (0, JANELA_ALTURA - 36))
+            fonte_rodada = pygame.font.SysFont("Arial", 20, bold=True)
+            texto_rodada = fonte_rodada.render(f"Rodada {self.rodada_atual}/{DERROTA_LIMITE_RODADAS}", True, (255, 255, 255))
+            rect_rodada = texto_rodada.get_rect(midright=(JANELA_LARGURA - 20, JANELA_ALTURA - 18))
+            janela.blit(texto_rodada, rect_rodada)
+            # --- Mensagem de acao ---
+            if not self.algum_jogador_movendo() and not self.aguardando_turno and not self.quiz_ativo and not self.quiz_aguardando:
+                fonte_msg = pygame.font.SysFont("Arial", 20, bold=True)
+                msg = fonte_msg.render("Pressione ESPACO para rolar o dado", True, (255, 255, 255))
+                rect_msg = msg.get_rect(midleft=(20, JANELA_ALTURA - 18))
+                janela.blit(msg, rect_msg)
 
         # --- Mensagem de vitoria ---
         if self.vencedor:
@@ -288,6 +311,22 @@ class Tabuleiro(Tela):
             texto_vitoria = fonte_vitoria.render(f"Jogador {self.vencedor.numero} venceu!", True, QUIZ_COR_ACERTO)
             rect = texto_vitoria.get_rect(center=(JANELA_LARGURA // 2, JANELA_ALTURA // 2 - 15))
             janela.blit(texto_vitoria, rect)
+            fonte_instrucao = pygame.font.SysFont(QUIZ_FONTE, 20)
+            instrucao = fonte_instrucao.render("Esc: voltar ao menu", True, (200, 200, 200))
+            rect_instrucao = instrucao.get_rect(center=(JANELA_LARGURA // 2, JANELA_ALTURA // 2 + 35))
+            janela.blit(instrucao, rect_instrucao)
+
+        # --- Mensagem de derrota ---
+        if self.derrota:
+            painel_derrota = pygame.Surface((500, 150), pygame.SRCALPHA)
+            pygame.draw.rect(painel_derrota, QUIZ_COR_FUNDO_PAINEL, (0, 0, 500, 150), border_radius=QUIZ_RAIO_BORDA)
+            pygame.draw.rect(painel_derrota, QUIZ_COR_ERRO, (0, 0, 500, 150), QUIZ_ESPESSURA_BORDA, border_radius=QUIZ_RAIO_BORDA)
+            rect_painel = painel_derrota.get_rect(center=(JANELA_LARGURA // 2, JANELA_ALTURA // 2))
+            janela.blit(painel_derrota, rect_painel)
+            fonte_derrota = pygame.font.SysFont(QUIZ_FONTE, 42, bold=True)
+            texto_derrota = fonte_derrota.render("Rodadas esgotadas!", True, QUIZ_COR_ERRO)
+            rect = texto_derrota.get_rect(center=(JANELA_LARGURA // 2, JANELA_ALTURA // 2 - 15))
+            janela.blit(texto_derrota, rect)
             fonte_instrucao = pygame.font.SysFont(QUIZ_FONTE, 20)
             instrucao = fonte_instrucao.render("Esc: voltar ao menu", True, (200, 200, 200))
             rect_instrucao = instrucao.get_rect(center=(JANELA_LARGURA // 2, JANELA_ALTURA // 2 + 35))
@@ -328,18 +367,12 @@ class Tabuleiro(Tela):
                     from src.TelaMenu import TelaMenu
                     self.jogo.trocar_tela(TelaMenu(self.jogo))
                 elif evento.key == pygame.K_SPACE:
-                    if not self.algum_jogador_movendo() and not self.aguardando_turno and not self.quiz_aguardando and not self.vencedor:
+                    if not self.algum_jogador_movendo() and not self.aguardando_turno and not self.quiz_aguardando and not self.vencedor and not self.derrota:
                         self.rolar_dado()
 
     def atualizar_turno(self):
         # --- Verifica se o jogador terminou de mover e inicia o quiz ---
         jogador = self.jogador_da_vez()
-
-        # --- Se voltou pra partida, posiciona fora do tabuleiro ---
-        if self.voltando_pra_partida and not jogador.movendo:
-            jogador.x, jogador.y = self.pos_partida
-            jogador.casa_atual = 0
-            self.voltando_pra_partida = False
 
         # --- Verifica vitoria: jogador passou da ultima casa ---
         if not jogador.movendo and jogador.casa_atual == len(self.casas) and not self.vencedor:
@@ -365,3 +398,6 @@ class Tabuleiro(Tela):
                     self.passar_turno()
                     self.valor_dado = 0
                     self.aguardando_turno = False
+                    # --- Verifica derrota no modo solo ---
+                    if self.quantidade_jogadores == 1 and self.rodada_atual >= DERROTA_LIMITE_RODADAS and not self.vencedor:
+                        self.derrota = True

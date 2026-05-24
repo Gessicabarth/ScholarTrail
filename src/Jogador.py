@@ -41,6 +41,5 @@ class Jogador:
         imagem = self.imagem.copy()
         if not ativo:
             imagem.set_alpha(100)
-        altura_img = imagem.get_height()
-        rect = imagem.get_rect(midbottom=(self.x + self.deslocamento_x, self.y + altura_img // 4))
+        rect = imagem.get_rect(midbottom=(self.x + self.deslocamento_x, self.y + 15))
         janela.blit(imagem, rect)
