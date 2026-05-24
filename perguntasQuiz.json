@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "disciplina": "LINGUAGEM DE PROGRAMAÇÃO APLICADA",
+    "pergunta": "Qual padrão de design criacional utiliza um método para criar objetos sem especificar a classe exata?",
+    "opcoes": {
+      "1": "Proxy",
+      "2": "Builder",
+      "3": "Adapter",
+      "4": "Factory Method"
+    },
+    "resposta_correta": "4"
+  },
+  {
+    "id": 2,
+    "disciplina": "LINGUAGEM DE PROGRAMAÇÃO APLICADA",
+    "pergunta": "Qual é a função da classe ABC em Python?",
+    "opcoes": {
+      "1": "Definir classes abstratas que não podem ser instanciadas diretamente.",
+      "2": "Compilar código Python para executável.",
+      "3": "Criar interfaces gráficas.",
+      "4": "Gerenciar conexões com banco de dados."
+    },
+    "resposta_correta": "1"
+  },
+  {
+    "id": 3,
+    "disciplina": "LINGUAGEM DE PROGRAMAÇÃO APLICADA",
+    "pergunta": "O que um Decorator faz em Python?",
+    "opcoes": {
+      "1": "Criptografa o retorno de uma função.",
+      "2": "Remove funções duplicadas do código.",
+      "3": "Adiciona comportamento a uma função sem modificar seu código original.",
+      "4": "Converte funções em classes automaticamente."
+    },
+    "resposta_correta": "3"
+  },
+  {
+    "id": 4,
+    "disciplina": "LINGUAGEM DE PROGRAMAÇÃO APLICADA",
+    "pergunta": "Qual padrão de design comportamental centraliza a comunicação entre objetos para reduzir acoplamento?",
+    "opcoes": {
+      "1": "Observer",
+      "2": "Mediator",
+      "3": "Proxy",
+      "4": "Adapter"
+    },
+    "resposta_correta": "2"
+  },
+  {
+    "id": 5,
+    "disciplina": "LINGUAGEM DE PROGRAMAÇÃO APLICADA",
+    "pergunta": "Qual ferramenta é usada para gerar um executável (.exe) a partir de um script Python?",
+    "opcoes": {
+      "1": "pip install",
+      "2": "SQLite3",
+      "3": "PyTest",
+      "4": "PyInstaller"
+    },
+    "resposta_correta": "4"
+  },
+  {
+    "id": 6,
+    "disciplina": "LINGUAGEM DE PROGRAMAÇÃO APLICADA",
+    "pergunta": "O padrão Observer serve para:",
+    "opcoes": {
+      "1": "Substituir a interface de uma classe por outra compatível.",
+      "2": "Notificar múltiplos objetos quando o estado de outro objeto muda.",
+      "3": "Controlar o acesso a um objeto.",
+      "4": "Criar objetos complexos passo a passo."
+    },
+    "resposta_correta": "2"
+  },
+  {
+    "id": 7,
+    "disciplina": "CIRCUITOS E SISTEMAS DIGITAIS",
+    "pergunta": "Qual é o resultado da operação lógica AND entre as entradas 1 e 0?",
+    "opcoes": {
+      "1": "1",
+      "2": "2",
+      "3": "0",
+      "4": "Nulo"
+    },
+    "resposta_correta": "3"
+  },
+  {
+    "id": 8,
+    "disciplina": "LINGUAGEM DE PROGRAMAÇÃO APLICADA",
+    "pergunta": "O padrão estrutural Proxy tem como objetivo:",
+    "opcoes": {
+      "1": "Controlar o acesso a um objeto, atuando como intermediário.",
+      "2": "Adaptar interfaces incompatíveis.",
+      "3": "Notificar objetos sobre mudanças de estado.",
+      "4": "Criar famílias de objetos relacionados."
+    },
+    "resposta_correta": "1"
+  },
+  {
+    "id": 9,
+    "disciplina": "INTRODUÇÃO A INTELIGÊNCIA ARTIFICIAL",
+    "pergunta": "O Teste de Turing avalia se uma máquina consegue:",
+    "opcoes": {
+      "1": "Processar dados mais rápido que um humano.",
+      "2": "Aprender qualquer idioma em segundos.",
+      "3": "Resolver equações matemáticas complexas.",
+      "4": "Exibir comportamento indistinguível de um humano em uma conversa."
+    },
+    "resposta_correta": "4"
+  },
+  {
+    "id": 10,
+    "disciplina": "INTRODUÇÃO A INTELIGÊNCIA ARTIFICIAL",
+    "pergunta": "No algoritmo genético, o que o teste de fitness avalia?",
+    "opcoes": {
+      "1": "O número de gerações criadas.",
+      "2": "A quantidade de memória utilizada.",
+      "3": "O quão boa é uma solução candidata para o problema.",
+      "4": "A velocidade de execução do algoritmo."
+    },
+    "resposta_correta": "3"
+  },
+  {
+    "id": 11,
+    "disciplina": "INTRODUÇÃO A INTELIGÊNCIA ARTIFICIAL",
+    "pergunta": "O que é crossover em algoritmos genéticos?",
+    "opcoes": {
+      "1": "A alteração aleatória de um gene.",
+      "2": "A combinação de material genético de dois pais para gerar filhos.",
+      "3": "A criação da população inicial.",
+      "4": "A eliminação dos piores indivíduos."
+    },
+    "resposta_correta": "2"
+  },
+  {
+    "id": 12,
+    "disciplina": "INTRODUÇÃO A INTELIGÊNCIA ARTIFICIAL",
+    "pergunta": "Em redes neurais, qual é a função dos pesos (weights)?",
+    "opcoes": {
+      "1": "Determinar a importância de cada entrada na decisão do neurônio.",
+      "2": "Armazenar os dados de treinamento.",
+      "3": "Contar o número de camadas da rede.",
+      "4": "Definir a cor dos neurônios na visualização."
+    },
+    "resposta_correta": "1"
+  },
+  {
+    "id": 13,
+    "disciplina": "INTRODUÇÃO A INTELIGÊNCIA ARTIFICIAL",
+    "pergunta": "O que é retropropagação (backpropagation)?",
+    "opcoes": {
+      "1": "O processo de enviar dados da entrada para a saída.",
+      "2": "O método de remover camadas desnecessárias.",
+      "3": "O algoritmo que ajusta os pesos da rede propagando o erro da saída para as camadas anteriores.",
+      "4": "A técnica de duplicar neurônios para acelerar o treinamento."
+    },
+    "resposta_correta": "3"
+  },
+  {
+    "id": 14,
+    "disciplina": "INTRODUÇÃO A INTELIGÊNCIA ARTIFICIAL",
+    "pergunta": "No Dilema do Prisioneiro, o que acontece quando ambos os jogadores cooperam?",
+    "opcoes": {
+      "1": "Ambos recebem a pior punição possível.",
+      "2": "Um ganha tudo e o outro perde tudo.",
+      "3": "O jogo é reiniciado.",
+      "4": "Ambos recebem uma recompensa moderada."
+    },
+    "resposta_correta": "4"
+  },
+  {
+    "id": 15,
+    "disciplina": "INTRODUÇÃO A INTELIGÊNCIA ARTIFICIAL",
+    "pergunta": "O que são GANs (Redes Adversariais Generativas)?",
+    "opcoes": {
+      "1": "Sistemas de busca em grafos.",
+      "2": "Redes que competem entre si: uma gera conteúdo e outra tenta distinguir o real do falso.",
+      "3": "Algoritmos genéticos aplicados a redes neurais.",
+      "4": "Redes especializadas apenas em classificação de imagens."
+    },
+    "resposta_correta": "2"
+  },
+  {
+    "id": 16,
+    "disciplina": "INTRODUÇÃO A INTELIGÊNCIA ARTIFICIAL",
+    "pergunta": "Em LLMs (Large Language Models), o que são tokens?",
+    "opcoes": {
+      "1": "Tipos de funções de ativação.",
+      "2": "Camadas ocultas da rede neural.",
+      "3": "Unidades de texto (palavras ou partes de palavras) que o modelo processa.",
+      "4": "Moedas virtuais usadas para pagar o processamento."
+    },
+    "resposta_correta": "3"
+  },
+  {
+    "id": 17,
+    "disciplina": "PROGRAMAÇÃO ORIENTADA A OBJETOS",
+    "pergunta": "O que é encapsulamento?",
+    "opcoes": {
+      "1": "Criar múltiplas instâncias de uma classe.",
+      "2": "Permitir que um método tenha múltiplas formas.",
+      "3": "Herdar métodos de uma classe pai.",
+      "4": "Esconder os detalhes internos de um objeto, expondo apenas uma interface controlada."
+    },
+    "resposta_correta": "4"
+  },
+  {
+    "id": 18,
+    "disciplina": "PROGRAMAÇÃO ORIENTADA A OBJETOS",
+    "pergunta": "Polimorfismo permite que:",
+    "opcoes": {
+      "1": "Objetos de classes diferentes respondam à mesma mensagem de formas distintas.",
+      "2": "Uma classe tenha apenas um método.",
+      "3": "O código seja compilado mais rápido.",
+      "4": "Variáveis mudem de tipo durante a execução."
+    },
+    "resposta_correta": "1"
+  },
+  {
+    "id": 19,
+    "disciplina": "ESTRUTURA DE DADOS",
+    "pergunta": "Qual é a principal característica de uma Fila (Queue)?",
+    "opcoes": {
+      "1": "Acesso direto por índice.",
+      "2": "Elementos são ordenados automaticamente.",
+      "3": "O primeiro a entrar é o primeiro a sair (FIFO).",
+      "4": "O último a entrar é o primeiro a sair (LIFO)."
+    },
+    "resposta_correta": "3"
+  },
+  {
+    "id": 20,
+    "disciplina": "ESTRUTURA DE DADOS",
+    "pergunta": "Em uma árvore binária de busca, onde ficam os valores menores que o nó raiz?",
+    "opcoes": {
+      "1": "No mesmo nível da raiz.",
+      "2": "Em uma lista separada.",
+      "3": "Na subárvore direita.",
+      "4": "Na subárvore esquerda."
+    },
+    "resposta_correta": "4"
+  },
+  {
+    "id": 21,
+    "disciplina": "BANCO DE DADOS RELACIONAL",
+    "pergunta": "Qual comando SQL é usado para buscar dados de uma tabela?",
+    "opcoes": {
+      "1": "SELECT",
+      "2": "INSERT",
+      "3": "UPDATE",
+      "4": "DELETE"
+    },
+    "resposta_correta": "1"
+  },
+  {
+    "id": 22,
+    "disciplina": "BANCO DE DADOS RELACIONAL",
+    "pergunta": "O que é uma Chave Estrangeira (Foreign Key)?",
+    "opcoes": {
+      "1": "Um campo que armazena senhas criptografadas.",
+      "2": "Um campo que identifica unicamente cada registro da própria tabela.",
+      "3": "Um campo que referencia a chave primária de outra tabela, criando um relacionamento.",
+      "4": "Um campo que não aceita valores nulos."
+    },
+    "resposta_correta": "3"
+  },
+  {
+    "id": 23,
+    "disciplina": "CIRCUITOS E SISTEMAS DIGITAIS",
+    "pergunta": "Qual porta lógica retorna 1 somente quando TODAS as entradas são 1?",
+    "opcoes": {
+      "1": "OR",
+      "2": "XOR",
+      "3": "NOT",
+      "4": "AND"
+    },
+    "resposta_correta": "4"
+  },
+  {
+    "id": 24,
+    "disciplina": "CIRCUITOS E SISTEMAS DIGITAIS",
+    "pergunta": "Qual é o valor decimal do número binário 1010?",
+    "opcoes": {
+      "1": "10",
+      "2": "8",
+      "3": "5",
+      "4": "12"
+    },
+    "resposta_correta": "1"
+  },
+  {
+    "id": 25,
+    "disciplina": "ENGENHARIA DE SOFTWARE",
+    "pergunta": "O que é o modelo de desenvolvimento ágil Scrum?",
+    "opcoes": {
+      "1": "Um método que elimina a necessidade de testes.",
+      "2": "Um framework iterativo com sprints curtos e entregas incrementais.",
+      "3": "Um modelo exclusivo para projetos de hardware.",
+      "4": "Um modelo sequencial onde cada fase deve ser concluída antes da próxima."
+    },
+    "resposta_correta": "2"
+  },
+  {
+    "id": 26,
+    "disciplina": "PROGRAMAÇÃO ESTRUTURADA",
+    "pergunta": "O que é uma função recursiva?",
+    "opcoes": {
+      "1": "Uma função que chama a si mesma para resolver um problema.",
+      "2": "Uma função que nunca retorna valor.",
+      "3": "Uma função que só aceita números inteiros.",
+      "4": "Uma função que executa apenas uma vez."
+    },
+    "resposta_correta": "1"
+  },
+  {
+    "id": 27,
+    "disciplina": "ARQUITETURA DE COMPUTADORES",
+    "pergunta": "Qual é a diferença principal entre memória RAM e memória ROM?",
+    "opcoes": {
+      "1": "ROM pode ser reescrita facilmente e RAM não.",
+      "2": "RAM é mais lenta que ROM.",
+      "3": "Não há diferença entre elas.",
+      "4": "RAM é volátil (perde dados ao desligar) e ROM é não-volátil."
+    },
+    "resposta_correta": "4"
+  },
+  {
+    "id": 28,
+    "disciplina": "PROBABILIDADE E ESTATÍSTICA",
+    "pergunta": "O que a mediana representa em um conjunto de dados?",
+    "opcoes": {
+      "1": "O valor que mais se repete.",
+      "2": "A soma de todos os valores.",
+      "3": "O valor central quando os dados estão ordenados.",
+      "4": "A diferença entre o maior e o menor valor."
+    },
+    "resposta_correta": "3"
+  },
+  {
+    "id": 29,
+    "disciplina": "DESIGN DE INTERAÇÃO",
+    "pergunta": "O que são as Heurísticas de Nielsen?",
+    "opcoes": {
+      "1": "Princípios gerais para avaliar a usabilidade de interfaces.",
+      "2": "Algoritmos de ordenação de dados.",
+      "3": "Padrões de cores para websites.",
+      "4": "Regras para criação de banco de dados."
+    },
+    "resposta_correta": "1"
+  },
+  {
+    "id": 30,
+    "disciplina": "SISTEMAS OPERACIONAIS",
+    "pergunta": "O que é um processo em um Sistema Operacional?",
+    "opcoes": {
+      "1": "Uma pasta do sistema de arquivos.",
+      "2": "Um comando digitado no terminal.",
+      "3": "Um arquivo salvo no disco rígido.",
+      "4": "Um programa em execução que possui recursos alocados pelo SO."
+    },
+    "resposta_correta": "4"
+  },
+  {
+    "id": 31,
+    "disciplina": "PROGRAMAÇÃO ORIENTADA A OBJETOSs",
+    "pergunta": "Qual conceito permite que uma classe herde atributos e métodos de outra classe?",
+    "opcoes": {
+      "1": "Encapsulamento",
+      "2": "Polimorfismo",
+      "3": "Abstração",
+      "4": "Herança"
+    },
+    "resposta_correta": "4"
+  },
+  {
+    "id": 32,
+    "disciplina": "PROGRAMAÇÃO ESTRUTURADA",
+    "pergunta": "Qual estrutura de repetição é utilizada quando se sabe previamente o número de iterações?",
+    "opcoes": {
+      "1": "For",
+      "2": "If-Else",
+      "3": "While",
+      "4": "Switch"
+    },
+    "resposta_correta": "1"
+  },
+  {
+    "id": 33,
+    "disciplina": "BANCO DE DADOS RELACIONAL",
+    "pergunta": "Qual é a função da Chave Primária (Primary Key)?",
+    "opcoes": {
+      "1": "Permitir valores duplicados em uma coluna.",
+      "2": "Relacionar duas tabelas sem restrições.",
+      "3": "Criptografar os dados da tabela.",
+      "4": "Identificar de forma única cada registro em uma tabela."
+    },
+    "resposta_correta": "4"
+  },
+  {
+    "id": 34,
+    "disciplina": "ENGENHARIA DE SOFTWARE",
+    "pergunta": "Como são chamadas as descrições do que o sistema deve fazer e quais serviços ele deve oferecer?",
+    "opcoes": {
+      "1": "Requisitos Não-Funcionais",
+      "2": "Requisitos Funcionais",
+      "3": "Testes de Unidade",
+      "4": "Diagramas de Classe"
+    },
+    "resposta_correta": "2"
+  },
+  {
+    "id": 35,
+    "disciplina": "ARQUITETURA DE COMPUTADORES",
+    "pergunta": "Qual componente é responsável por realizar operações aritméticas e lógicas?",
+    "opcoes": {
+      "1": "Unidade Lógica e Aritmética (ULA)",
+      "2": "Disco Rígido (HD)",
+      "3": "Memória RAM",
+      "4": "Placa de Vídeo"
+    },
+    "resposta_correta": "1"
+  },
+  {
+    "id": 36,
+    "disciplina": "INTRODUÇÃO A INTELIGÊNCIA ARTIFICIAL",
+    "pergunta": "Qual termo descreve a capacidade de uma máquina aprender com dados sem ser explicitamente programada para cada tarefa?",
+    "opcoes": {
+      "1": "Algoritmo de Busca",
+      "2": "Visão Computacional",
+      "3": "Sistemas Especialistas",
+      "4": "Machine Learning (Aprendizado de Máquina)"
+    },
+    "resposta_correta": "4"
+  },
+  {
+    "id": 37,
+    "disciplina": "DESIGN DE INTERAÇÃO",
+    "pergunta": "Qual é o principal objetivo da Usabilidade?",
+    "opcoes": {
+      "1": "Tornar o sistema visualmente complexo.",
+      "2": "Garantir que o usuário realize suas tarefas de forma fácil e eficiente.",
+      "3": "Aumentar o tempo de carregamento da página.",
+      "4": "Reduzir o número de cores utilizadas na interface."
+    },
+    "resposta_correta": "2"
+  },
+  {
+    "id": 38,
+    "disciplina": "PROBABILIDADE E ESTATÍSTICA",
+    "pergunta": "Como se chama o valor que ocorre com maior frequência em um conjunto de dados?",
+    "opcoes": {
+      "1": "Moda",
+      "2": "Mediana",
+      "3": "Média",
+      "4": "Desvio Padrão"
+    },
+    "resposta_correta": "1"
+  },
+  {
+    "id": 39,
+    "disciplina": "SISTEMAS OPERACIONAIS",
+    "pergunta": "Qual é a função principal de um Sistema Operacional?",
+    "opcoes": {
+      "1": "Criar apresentações de slides.",
+      "2": "Compilar código-fonte em Python.",
+      "3": "Gerenciar o hardware e prover serviços para os programas aplicativos.",
+      "4": "Apenas navegar na internet."
+    },
+    "resposta_correta": "3"
+  },
+  {
+    "id": 40,
+    "disciplina": "LINGUAGEM DE PROGRAMAÇÃO APLICADA",
+    "pergunta": "Qual é a principal finalidade de um sistema como o Git?",
+    "opcoes": {
+      "1": "Aumentar a velocidade de execução do código-fonte.",
+      "2": "Compilar o código automaticamente para o formato executável.",
+      "3": "Hospedar domínios de internet.",
+      "4": "Rastrear o histórico de alterações e gerenciar as versões do código."
+    },
+    "resposta_correta": "4"
+  },
+  {
+    "id": 41,
+    "disciplina": "LINGUAGEM DE PROGRAMAÇÃO APLICADA",
+    "pergunta": "O que um Diagrama de Classes descreve de forma estrutural?",
+    "opcoes": {
+      "1": "A estrutura do sistema, evidenciando suas classes, atributos e métodos.",
+      "2": "O layout visual da interface gráfica de um sistema.",
+      "3": "O fluxo temporal e sequencial da execução do programa.",
+      "4": "A infraestrutura de rede necessária para o software."
+    },
+    "resposta_correta": "1"
+  },
+  {
+    "id": 42,
+    "disciplina": "LINGUAGEM DE PROGRAMAÇÃO APLICADA",
+    "pergunta": "Qual é a principal vantagem de utilizar o recurso de List Comprehension em Python?",
+    "opcoes": {
+      "1": "Proteger os dados contidos em uma lista contra exclusões acidentais.",
+      "2": "Criar novas listas de maneira concisa e eficiente a partir de sequências existentes.",
+      "3": "Ordenar automaticamente os itens de um banco de dados relacional.",
+      "4": "Limpar a memória RAM automaticamente."
+    },
+    "resposta_correta": "2"
+  },
+  {
+    "id": 43,
+    "disciplina": "LINGUAGEM DE PROGRAMAÇÃO APLICADA",
+    "pergunta": "O formato JSON é amplamente utilizado no desenvolvimento. O que ele representa?",
+    "opcoes": {
+      "1": "Um motor de banco de dados relacional embutido no próprio sistema operacional.",
+      "2": "Uma linguagem de marcação projetada exclusivamente para a criação de páginas web.",
+      "3": "Um formato leve de intercâmbio de dados, estruturado em texto e de fácil leitura.",
+      "4": "Um protocolo de segurança de rede."
+    },
+    "resposta_correta": "3"
+  },
+  {
+    "id": 44,
+    "disciplina": "INTRODUÇÃO A INTELIGÊNCIA ARTIFICIAL",
+    "pergunta": "Como é classificada uma Inteligência Artificial projetada para realizar uma tarefa única e específica, como jogar xadrez ou identificar imagens?",
+    "opcoes": {
+      "1": "Inteligência Artificial Estreita ou Fraca (Narrow AI)",
+      "2": "Inteligência Artificial Geral (AGI)",
+      "3": "Superinteligência Artificial (ASI)",
+      "4": "Inteligência Artificial Quântica"
+    },
+    "resposta_correta": "1"
+  },
+  {
+    "id": 45,
+    "disciplina": "INTRODUÇÃO A INTELIGÊNCIA ARTIFICIAL",
+    "pergunta": "Os algoritmos que buscam soluções iterativas, evoluindo a cada geração para encontrar o melhor resultado, são inspirados em qual conceito biológico?",
+    "opcoes": {
+      "1": "Divisão Celular (Mitose)",
+      "2": "Ciclo de Krebs",
+      "3": "Fotossíntese",
+      "4": "Seleção Natural e Teoria da Evolução"
+    },
+    "resposta_correta": "4"
+  },
+  {
+    "id": 46,
+    "disciplina": "INTRODUÇÃO A INTELIGÊNCIA ARTIFICIAL",
+    "pergunta": "Qual modelo computacional de aprendizado é arquitetado com forte inspiração na estrutura biológica do cérebro humano?",
+    "opcoes": {
+      "1": "Árvores de Decisão",
+      "2": "Máquinas de Estados Finitos",
+      "3": "Redes Neurais Artificiais",
+      "4": "Florestas Aleatórias"
+    },
+    "resposta_correta": "3"
+  },
+  {
+    "id": 47,
+    "disciplina": "INTRODUÇÃO A INTELIGÊNCIA ARTIFICIAL",
+    "pergunta": "Como se define fundamentalmente um Agente no contexto da Inteligência Artificial?",
+    "opcoes": {
+      "1": "Uma entidade que percebe o seu ambiente através de sensores e atua sobre ele para atingir um objetivo.",
+      "2": "Um repositório estático que armazena grandes volumes de dados históricos.",
+      "3": "Um componente de hardware responsável apenas pelo resfriamento do processador.",
+      "4": "Um vírus de computador focado em mineração de dados."
+    },
+    "resposta_correta": "1"
+  },
+  {
+    "id": 48,
+    "disciplina": "INTRODUÇÃO A INTELIGÊNCIA ARTIFICIAL",
+    "pergunta": "Como um modelo de Aprendizado por Reforço aprende a executar tarefas complexas?",
+    "opcoes": {
+      "1": "Recebendo previamente um conjunto de regras lógicas estritas que não podem ser alteradas ou desafiadas.",
+      "2": "Clonando exatamente a base de dados de outro modelo de Inteligência Artificial preexistente.",
+      "3": "Pesquisando informações na internet em tempo real.",
+      "4": "Através de interações com o ambiente, recebendo recompensas por acertos e penalidades por erros."
+    },
+    "resposta_correta": "4"
+  },
+  {
+    "id": 49,
+    "disciplina": "ESTRUTURA DE DADOS",
+    "pergunta": "Qual é a principal característica de uma Pilha (Stack)?",
+    "opcoes": {
+      "1": "O primeiro elemento a entrar é o primeiro a sair (FIFO).",
+      "2": "Os elementos são acessados de forma aleatória.",
+      "3": "O último elemento a entrar é o primeiro a sair (LIFO).",
+      "4": "Os elementos são organizados apenas de forma circular."
+    },
+    "resposta_correta": "3"
+  },
+  {
+    "id": 50,
+    "disciplina": "LINGUAGEM DE PROGRAMAÇÃO APLICADA",
+    "pergunta": "Em Python, qual é a principal finalidade do método especial __init__ dentro de uma classe?",
+    "opcoes": {
+      "1": "Destruir a instância do objeto para liberar espaço na memória do sistema.",
+      "2": "Converter as propriedades e métodos do objeto em formato de texto estruturado.",
+      "3": "Proteger os atributos da classe contra modificações externas não autorizadas.",
+      "4": "Inicializar os atributos de um novo objeto no exato momento de sua instanciação."
+    },
+    "resposta_correta": "4"
+  }
+]
