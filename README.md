@@ -1,9 +1,9 @@
- ScholarTrail 
+ Scholar Trail 
 ===============
 
 ### Sobre
 
-ScholarTrail é um jogo de tabuleiro educativo com quiz  em 2D, desenvolvido em Python com Pygame para um trabalho da faculdade da matéria "Linguagem de Programação Aplicada". É um jogo para se divertir e fixar o conteúdo do curso CIÊNCIA DA COMPUTAÇÃO.
+Scholar Trail é um jogo de tabuleiro educativo com quiz  em 2D, desenvolvido em Python com Pygame para um trabalho da faculdade da matéria "Linguagem de Programação Aplicada". É um jogo para se divertir e fixar o conteúdo do curso CIÊNCIA DA COMPUTAÇÃO.
 
 <br>
 <br>
