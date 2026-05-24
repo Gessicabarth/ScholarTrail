@@ -18,6 +18,7 @@ class GerenciadorJogo:
         self.tela_ativa = nova_tela
 
     def executar(self):
+        # --- Loop principal do jogo ---
         while self.rodando:
             for evento in pygame.event.get():
                 if evento.type == pygame.QUIT:

@@ -28,10 +28,10 @@ class CasaTabuleiro:
         janela.blit(superficie, (self.x, self.y))
 
         # --- Numero da casa ---
-        fonte = pygame.font.SysFont("Arial", 16, bold=True)
+        fonte = pygame.font.SysFont("Arial", 20, bold=True)
         texto = fonte.render(str(self.numero), True, COR_NUMERO_CASA_CLARO)
-        rect = texto.get_rect(center=(self.x + CASA_LARGURA // 2, self.y + CASA_ALTURA // 2))
-        janela.blit(texto, rect)
+        retangulo = texto.get_rect(center=(self.x + CASA_LARGURA // 2, self.y + CASA_ALTURA // 2))
+        janela.blit(texto, retangulo)
 
     def obter_centro(self):
         # --- Retorna o centro da casa em pixels ---

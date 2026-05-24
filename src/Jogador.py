@@ -37,9 +37,9 @@ class Jogador:
                 self.movendo = False
 
     def desenhar(self, janela, ativo=True):
-        # --- Desenha o personagem (transparente se nao for a vez) ---
+        # --- Desenha o personagem (transparente se não for a vez) ---
         imagem = self.imagem.copy()
         if not ativo:
             imagem.set_alpha(100)
-        rect = imagem.get_rect(midbottom=(self.x + self.deslocamento_x, self.y + 15))
-        janela.blit(imagem, rect)
+        retangulo = imagem.get_rect(midbottom=(self.x + self.deslocamento_x, self.y + 15))
+        janela.blit(imagem, retangulo)
